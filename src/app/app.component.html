@@ -1,24 +1,87 @@
-<mat-toolbar color="primary">
-<mat-toolbar-row>
+<mat-toolbar color="primary" class="header">
+  <mat-toolbar-row>
   <span>
-    <button mat-button>
-    <mat-icon>home</mat-icon>
+    <button mat-button class="button-space" (click)="mainDisplay = true">
+    <mat-icon class="button-inner-space">home</mat-icon>
+      Home
     </button>
-    <button mat-button class="mat-body">
-      <mat-icon>timeline</mat-icon>
+    <button mat-button class="mat-body" (click)="mainDisplay = false">
+      <mat-icon class="button-inner-space">timeline</mat-icon>
         Data Tables
     </button>
   </span>
+    <span class="align-right">
+  </span>
+    <span>
+    <button mat-button (click)="click()">
+      <mat-icon class="button-inner-space">code</mat-icon>
+      See on Github
+    </button>
+  </span>
 
-</mat-toolbar-row>
+  </mat-toolbar-row>
 </mat-toolbar>
-<div class="main-content">
-  <mat-card class="">
-    <h2 class="mat-display-1">
-      Rochester, New York
-    </h2>
-    <p>
-      Flour city
-    </p>
-  </mat-card>
+<div class="main-content less-margins">
+  <div *ngIf="mainDisplay">
+    <div class="header-center">
+      <div class="mat-display-2">
+        Rochester, New York
+      </div>
+      <div class="mat-headline">
+        The Flour city
+      </div>
+      <div class="mat-body">
+        The history of early Rochester and the rise and fall of the Flour City
+      </div>
+    </div>
+    <mat-divider class="line-gap"></mat-divider>
+    <mat-card>
+        <div class="header-center">
+          <div class="mat-headline">
+            Founding of Rochesterville
+          </div>
+        </div>
+
+        <div class="mat-body">
+          Rochester was founded in early 1800's
+        </div>
+    </mat-card>
+    <mat-divider class="line-gap"></mat-divider>
+    <mat-card>
+      <div class="header-center">
+        <div class="mat-headline">
+          Foundations of the Flour City
+        </div>
+      </div>
+
+      <div class="mat-body">
+       Upon the completion of the erie canal it was only a matter of time until the once small
+        town became a fully fledged city
+      </div>
+    </mat-card>
+    <mat-divider class="line-gap"></mat-divider>
+    <mat-card>
+      <div class="header-center">
+        <div class="mat-headline">
+          Fall of the Milling Industry
+        </div>
+      </div>
+      <div class="mat-body">
+        With American growth westward and settling of the great planes and the future breadbasket of America shifted
+        much of the nations wheat production westward
+      </div>
+    </mat-card>
+
+  </div>
+  <!--DATA TABLES GO HERE-->
+  <div *ngIf="!mainDisplay">
+    <app-high-low></app-high-low>
+  </div>
 </div>
+<mat-toolbar color="primary" class="footer">
+  <mat-toolbar-row>
+    <div class="mat-body">
+      Developed by Ian Montgomery (2019)
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

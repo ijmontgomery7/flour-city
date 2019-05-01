@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'rochester-flour';
+  mainDisplay = true;
+
+  static click(): void {
+    location.href = 'https://github.com/ijmontgomery7/flour-city'
+  }
 }

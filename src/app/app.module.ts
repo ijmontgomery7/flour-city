@@ -3,11 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCardModule, MatIconModule, MatToolbarModule} from '@angular/material';
+import {
+  MatButtonModule, MatCardModule, MatDividerModule, MatGridListModule, MatIconModule, MatTableModule,
+  MatToolbarModule
+} from '@angular/material';
+import { HighLowComponent } from './high-low/high-low.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HighLowComponent
   ],
   imports: [
     BrowserModule,
@@ -15,7 +21,9 @@ import {MatButtonModule, MatCardModule, MatIconModule, MatToolbarModule} from '@
     MatToolbarModule,
     MatCardModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTableModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

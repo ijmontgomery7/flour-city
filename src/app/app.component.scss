@@ -1,9 +1,41 @@
-.toolbar-center {
-  margin: 0 auto;
+.header-center {
+  text-align: center;
+}
+
+.less-margins {
+  div {
+    margin: 10px;
+  }
+}
+
+.line-gap {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.align-right {
+  flex: 1 1 auto;
+}
+
+.button-space {
+  margin-right: 5px;
+}
+
+.button-inner-space {
+  margin-right: 3px;
 }
 
 .main-content {
   margin-top: 15px;
   margin-left: 15%;
   margin-right: 15%;
+}
+
+.header {
+  position: sticky;
+}
+
+.footer {
+  bottom: 0;
+  position: absolute;
 }
