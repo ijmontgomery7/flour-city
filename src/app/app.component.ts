@@ -9,6 +9,7 @@ export class AppComponent {
   mainDisplay = true;
 
   click(): void {
-    location.href = 'https://github.com/ijmontgomery7/flour-city'
+    location.href = 'https://github.com/ijmontgomery7/flour-city';
+    window.scrollTo(0, 0);
   }
 }

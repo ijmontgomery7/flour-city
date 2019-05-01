@@ -18,8 +18,10 @@ export class HighLowComponent implements OnInit {
     {month : 'Sep', data1830: [5.00, 5.38], data1829: [5.25, 5.50]},
     {month : 'Oct', data1830: [5.00, 5.25], data1829: [5.25, 5.88]},
     {month : 'Nov', data1830: [5.06, 5.25], data1829: [5.25, 5.50]},
-    {month : 'Dec', data1830: [5.06, 5.25], data1829: [5.00, 5.38]}
+    {month : 'Dec', data1830: [5.06, 5.25], data1829: [5.00, 5.38]},
   ];
+
+  total = {label: 'Year\'s extremes', data1830: [4.62, 5.50], data1829: [5.00, 8.50]};
 
   displayedColumns = ['month', '1830-range', 'percent-changed-1830', '1829-range', 'percent-changed-1829'];
   constructor() { }
