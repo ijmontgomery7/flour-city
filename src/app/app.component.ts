@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   mainDisplay = true;
 
-  static click(): void {
+  click(): void {
     location.href = 'https://github.com/ijmontgomery7/flour-city'
   }
 }
